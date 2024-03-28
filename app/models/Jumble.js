@@ -26,11 +26,11 @@ export class Jumble {
                 </div>
             </div>
             <div class="row">
-                <textarea name="" id="user-entry">
-                        Jumble goes in here
-                    </textarea>
-                <button>submit</button>
-                <!-- THIS BUTTON NEEDS ONCLICK-->
+                <form onsubmit="app.JumblesController.submitJumble('${this.id}')">
+                <label name="entry" for="entry">Type below</input>
+                <input type="textarea" name="entry" id="user-entry"></input>
+                <button type="submit">submit</button>
+                </form>
             </div>
         `
     }

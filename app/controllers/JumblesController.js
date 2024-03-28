@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js"
 import { Jumble } from "../models/Jumble.js"
 import { jumblesService } from "../services/JumbleService.js"
+import { getFormData } from "../utils/FormHandler.js"
 import { setHTML } from "../utils/Writer.js"
 
 export class JumblesController {
@@ -21,7 +22,7 @@ export class JumblesController {
     drawJumbleList() {
         const jumbleList = AppState.jumbles
         let jumbleListContent = ''
-        jumbleList.forEach(jumble => jumbleListContent = jumble.GetJumbleList)
+        jumbleList.forEach(jumble => jumbleListContent += jumble.GetJumbleList)
         setHTML('jumble-list', jumbleListContent)
     }
 
@@ -43,6 +44,22 @@ export class JumblesController {
     }
 
     createJumble() {
+        event.preventDefault()
+        console.log('you submitted, yaay!')
+        const form = event.target
+        const jumbleFormData = getFormData(form)
+        console.log(jumbleFormData)
+        jumblesService.createJumble(jumbleFormData)
+        form.reset()
+        this.drawJumbleList()
+    }
+
+    submitJumble(id) {
+        event.preventDefault()
+        const form = event.target
+        const entryData = getFormData(form)
+        console.log('typed', entryData, id)
+        jumblesService.submitJumble(entryData, id)
 
     }
 
