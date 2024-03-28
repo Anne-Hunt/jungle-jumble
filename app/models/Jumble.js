@@ -6,8 +6,8 @@ export class Jumble {
         this.name = data.name
         this.body = data.body
         // to best keep track of the fastest times you might want these properties too! They would start null cause no one has completed these yet.
-        this.fastestTime = this.fastestTime == null ? :
-            this.startTime = null
+        this.fastestTime = null
+        this.startTime = null
         this.endTime = null
     }
 
@@ -40,7 +40,7 @@ export class Jumble {
         
         <div class="row">
                     <div class="col d-flex justify-content-between">
-                        <button>start</button>
+                        <button onclick="app.JumblesController.setActiveJumble('${this.id}')">set active</button>
                         <!-- THIS BUTTON NEEDS ONCLICK-->
                         <span>${this.name}</span>
                         <span>${this.fastestTime}</span>

@@ -4,7 +4,7 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
 
-  Jumbles = [
+  jumbles = [
 
     new Jumble({
 
@@ -12,9 +12,12 @@ class ObservableAppState extends EventEmitter {
       body: `type these things really fast`
     }),
 
-
-
   ]
+
+  /**@type {Jumble} */
+  activeJumble = null
+
+
 
 
 
