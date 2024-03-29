@@ -8,11 +8,6 @@ export const router = new Router([
   {
     path: '',
     controllers: [JumblesController],
-    view: 'app/views/JumblesView.html'
-  },
-  {
-    path: '#/about',
-    view: 'app/views/AboutView.html'
   }
 
 ])

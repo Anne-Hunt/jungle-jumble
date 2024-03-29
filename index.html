@@ -18,33 +18,84 @@
 </head>
 
 <body class="debug">
-  <!-- SECTION -->
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">jungle-jumble</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
-      </div>
-      <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
-    </nav>
-  </header>
-
-  <!-- SECTION -->
   <main>
 
-    <section id="router-view">
-      <!-- primary viewport -->
+    <section class="container-fluid p-4">
+      <h1>Jungle Jumble!</h1>
+      <div class="row">
+
+        <div id="jumble-content" class="col-8">
+          <!-- <div class="row border border-dark mb-5">
+                  <div class="col">
+                      <h3>Jumble Name</h3>
+                  </div>
+                  <div class="col">
+                      <h3>Fastest Time</h3>
+                  </div>
+                  <div class="col-12">
+                      <p>Jumble here</p>
+                  </div>
+              </div>
+              <div class="row">
+                  <textarea name="" id="">
+                          Jumble goes in here
+                      </textarea>
+                  <button>submit</button>
+              </div> -->
+        </div>
+
+        <div id="jumble-form" class="col-4 py-5">
+          <div class="row p-4">
+            <h1>Jumbles!</h1>
+          </div>
+          <div id="jumble-list" class="container">
+            <!-- <div class="row">
+                      <div class="col d-flex justify-content-between">
+                          <button>button</button>
+                          <span>Jumble title</span>
+                          <span>Time</span>
+                          <span>WPM</span>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col d-flex justify-content-between">
+                          <button>button</button>
+                          <span>Jumble title</span>
+                          <span>Time</span>
+                          <span>WPM</span>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col d-flex justify-content-between">
+                          <button>button</button>
+                          <span>Jumble title</span>
+                          <span>Time</span>
+                          <span>WPM</span>
+                      </div>
+                  </div> -->
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <h3>Create Jumble</h3>
+                <form onsubmit="app.JumblesController.createJumble()">
+                  <label class="form-label" for="name">Name Your Jumble</label>
+                  <input class="form-control bg-light" class="w-100" type="text" name="name">
+                  <label class="form-label" for="body">Place Text Below</label>
+                  <textarea class="w-100 form-control mb-2 bg-light" row="10" name="body" id="body"></textarea>
+                  <button type="submit" class="w-100 btn btn-success">create</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
     </section>
 
   </main>
@@ -52,7 +103,7 @@
   <!-- SECTION -->
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+      <p class="mb-0"><small>Made with 💖 by Anne Hunt</small></p>
     </div>
   </footer>
 
