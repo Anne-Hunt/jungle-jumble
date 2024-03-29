@@ -49,3 +49,16 @@ h3 {
 .borderquintupiary {
     border-color: var(--quintupiary);
 }
+
+.righttopshadow {
+    box-shadow: 1px -1px var(--tertiary), 2px -2px var(--tertiary), 3px -3px var(--tertiary), 4px -4px var(--tertiary), 5px -5px var(--tertiary), 6px -6px var(--tertiary), 7px -7px var(--tertiary), 8px -8px var(--tertiary);
+}
+
+.lefttopshadow {
+    box-shadow: -1px -1px var(--quadrupiary), -2px -2px var(--quadrupiary), -3px -3px var(--quadrupiary), -4px -4px var(--quadrupiary), -5px -5px var(--quadrupiary), -6px -6px var(--quadrupiary), -7px -7px var(--quadrupiary), -8px -8px var(--quadrupiary);
+}
+
+.leftbottomshadow {
+    box-shadow: -1px 1px var(--quintupiary), -2px 2px var(--quintupiary), -3px 3px var(--quintupiary), -4px 4px var(--quintupiary), -5px 5px var(--quintupiary), -6px 6px var(--quintupiary), -7px 7px var(--quintupiary), -8px 8px var(--quintupiary);
+
+}

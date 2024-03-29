@@ -6,7 +6,7 @@ export class Jumble {
         this.name = data.name
         this.body = data.body
         // to best keep track of the fastest times you might want these properties too! They would start null cause no one has completed these yet.
-        this.fastestTime = null
+        this.fastestTime = this.GetFastestTime
         this.startTime = null
         this.endTime = null
     }
@@ -14,23 +14,23 @@ export class Jumble {
 
     get GetJumbleContent() {
         return `
-        <div class="container-fluid">
-        <div class="row bg-white border borderprimary border-3 rounded mb-5">
+        <div class="container-fluid p-3">
+        <div class="row bg-white border borderprimary border-3 lefttopshadow rounded mb-5">
             <div class="col">
                 <h3>${this.name}</h3>
             </div>
             <div class="col">
                 <h3>${this.fastestTime}</h3>
             </div>
-            <div class="col-12">
+            <div class="col-12 no-select">
                 <p>${this.body}</p>
             </div>
         </div>
 
-            <div class="row bg-white border borderprimary border-3 rounded">
+            <div class="row bg-white border borderprimary border-3 rounded leftbottomshadow">
                 <form onsubmit="app.JumblesController.submitJumble('${this.id}')">
                 <label name="entry" for="entry" class="form-label">Type below</label>
-                <textarea name="entry" id="user-entry" rows="7" columns="30" class="form-control mb-3 bg-light" placeholder="type your jumble here"></textarea>
+                <textarea name="entry" id="user-entry" rows="7" columns="30" class="form-control mb-3 bg-light" placeholder="type your jumble here" onclick="app.JumblesController.initialTime()"></textarea>
                 <button class="btn tertiary text-light mb-3" type="submit">Submit</button>
                 </form>
             </div>

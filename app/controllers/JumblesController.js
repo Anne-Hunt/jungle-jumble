@@ -54,13 +54,18 @@ export class JumblesController {
         this.drawJumbleList()
     }
 
+    initialTime() {
+        console.log('time has started')
+        jumblesService.intialTime()
+    }
+
     submitJumble(id) {
         event.preventDefault()
         const form = event.target
         const entryData = getFormData(form)
         console.log('typed', entryData, id)
         jumblesService.submitJumble(entryData, id)
-
+        jumblesService.endTime()
     }
 
 }

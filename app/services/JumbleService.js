@@ -2,6 +2,15 @@ import { AppState } from "../AppState.js"
 import { Jumble } from "../models/Jumble.js"
 
 class JumblesService {
+    endTime() {
+        let finishTime = new Date()
+        AppState.activeJumble.endTime = finishTime
+    }
+
+    intialTime() {
+        let initialTime = new Date()
+        AppState.activeJumble.startTime = initialTime
+    }
 
 
     setActiveJumble(id) {
