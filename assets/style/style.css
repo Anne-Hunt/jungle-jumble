@@ -1,1 +1,51 @@
-/* BASIC STYLES HERE */
+:root {
+    --primary: rgb(181, 107, 198);
+    --secondary: rgb(112, 181, 46);
+    --tertiary: rgb(225, 115, 114);
+    --quadrupiary: rgb(241, 193, 57);
+    --quintupiary: rgb(229, 150, 58);
+}
+
+body {
+    background-image: url('https://s3-alpha-sig.figma.com/img/3d65/deb2/3ae0cacdce9b38d902e8dff73e98ee46?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rs-gDVFxG7pMaT2nxDfXOqnN8IUPYRBbpEqqfflVNvqpOg4htz9BXNXqCLhhSaFKqrdGS~hyL6~4gvqovgcR5~Gk0YrZn4Ad3Ui0uLFo0Xi5tpeEJ9ilpcL6q9~8-c3w7eSl6CBRq-u~9LqlFNX4S7a3hroT78jEDheWA3lSRvbYl4PRhsbaVf21mmsNOngL9uVn446nlBxQ6dkefB1tGuigYtosP4xouc5jW6Z3VzgvATykltSqnnf3uia2fD4D2jIIWZtiTRzQEreq64il3uDv~cIoPrWdVKNGdet96V5TsxHkBDd~bsC9n2p-dVInxTnUNrIfih4G1mDalK-Xdw__');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Rubik 80s Fade", sans-serif;
+}
+
+h1 {
+    color: var(--primary);
+}
+
+h2 {
+    color: var(--quadrupiary);
+}
+
+h3 {
+    color: var(--secondary);
+}
+
+.borderprimary {
+    border-color: rgb(181, 107, 198);
+}
+
+.secondary {
+    background-color: var(--secondary);
+}
+
+.tertiary {
+    background-color: var(--tertiary);
+}
+
+.borderquadupiary {
+    border-color: var(--quadrupiary);
+}
+
+.borderquintupiary {
+    border-color: var(--quintupiary);
+}

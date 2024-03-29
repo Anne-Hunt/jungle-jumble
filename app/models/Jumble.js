@@ -14,7 +14,8 @@ export class Jumble {
 
     get GetJumbleContent() {
         return `
-        <div class="row border border-dark rounded mb-5">
+        <div class="container-fluid">
+        <div class="row bg-white border borderprimary border-3 rounded mb-5">
             <div class="col">
                 <h3>${this.name}</h3>
             </div>
@@ -25,29 +26,28 @@ export class Jumble {
                 <p>${this.body}</p>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
+
+            <div class="row bg-white border borderprimary border-3 rounded">
                 <form onsubmit="app.JumblesController.submitJumble('${this.id}')">
                 <label name="entry" for="entry" class="form-label">Type below</label>
                 <textarea name="entry" id="user-entry" rows="7" columns="30" class="form-control mb-3 bg-light" placeholder="type your jumble here"></textarea>
-                <button class="btn btn-success" type="submit">Submit</button>
+                <button class="btn tertiary text-light mb-3" type="submit">Submit</button>
                 </form>
             </div>
-        </div>
+            </div>
         `
     }
 
     get GetJumbleList() {
         return `
-        
-        <div class="row">
-                    <div class="col d-flex justify-content-between">
-                        <button class="btn btn-success" type="button "onclick="app.JumblesController.setActiveJumble('${this.id}')">Start</button>
-                        <span>${this.name}</span>
-                        <span>${this.fastestTime}</span>
-                        <span>${this.GetWpm}</span>
-                    </div>
+            <div class="row p-2">
+                <div class="col d-flex justify-content-between">
+                    <button class="btn secondary text-light" type="button "onclick="app.JumblesController.setActiveJumble('${this.id}')">Start</button>
+                    <span>${this.name}</span>
+                    <span>${this.fastestTime}</span>
+                    <span>${this.GetWpm}</span>
                 </div>
+            </div>
         
         `
     }

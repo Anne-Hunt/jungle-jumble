@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
@@ -17,85 +20,34 @@
     defer></script>
 </head>
 
-<body class="debug">
-  <main>
-
-    <section class="container-fluid p-4">
+<body>
+  <main class="container-fluid">
+    <section class="row p-4">
       <h1>Jungle Jumble!</h1>
-      <div class="row">
-
-        <div id="jumble-content" class="col-8">
-          <!-- <div class="row border border-dark mb-5">
-                  <div class="col">
-                      <h3>Jumble Name</h3>
-                  </div>
-                  <div class="col">
-                      <h3>Fastest Time</h3>
-                  </div>
-                  <div class="col-12">
-                      <p>Jumble here</p>
-                  </div>
-              </div>
-              <div class="row">
-                  <textarea name="" id="">
-                          Jumble goes in here
-                      </textarea>
-                  <button>submit</button>
-              </div> -->
-        </div>
-
-        <div id="jumble-form" class="col-4 py-5">
-          <div class="row p-4">
-            <h1>Jumbles!</h1>
-          </div>
-          <div id="jumble-list" class="container">
-            <!-- <div class="row">
-                      <div class="col d-flex justify-content-between">
-                          <button>button</button>
-                          <span>Jumble title</span>
-                          <span>Time</span>
-                          <span>WPM</span>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col d-flex justify-content-between">
-                          <button>button</button>
-                          <span>Jumble title</span>
-                          <span>Time</span>
-                          <span>WPM</span>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col d-flex justify-content-between">
-                          <button>button</button>
-                          <span>Jumble title</span>
-                          <span>Time</span>
-                          <span>WPM</span>
-                      </div>
-                  </div> -->
-          </div>
-
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <h3>Create Jumble</h3>
-                <form onsubmit="app.JumblesController.createJumble()">
-                  <label class="form-label" for="name">Name Your Jumble</label>
-                  <input class="form-control bg-light" class="w-100" type="text" name="name">
-                  <label class="form-label" for="body">Place Text Below</label>
-                  <textarea class="w-100 form-control mb-2 bg-light" row="10" name="body" id="body"></textarea>
-                  <button type="submit" class="w-100 btn btn-success">create</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
+    </section>
+    <section class="row">
+      <div id="jumble-content" class="col-8">
       </div>
 
+      <div id="jumble-form" class="col-4">
+        <div class="container-fluid border border-3 rounded bg-white">
+          <h2>Jumbles!</h2>
+          <div class="container-fluid" id="jumble-list">
+          </div>
+
+          <div class="row">
+            <h3>Create Jumble</h3>
+            <form onsubmit="app.JumblesController.createJumble()">
+              <label class="form-label" for="name">Name Your Jumble</label>
+              <input class="form-control bg-light" class="w-100" type="text" name="name">
+              <label class="form-label" for="body">Place Text Below</label>
+              <textarea class="w-100 form-control mb-2 bg-light" row="10" name="body" id="body"></textarea>
+              <button type="submit" class="w-100 btn secondary text-light mb-3">create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
     </section>
 
   </main>
